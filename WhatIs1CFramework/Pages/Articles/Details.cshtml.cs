@@ -39,10 +39,6 @@ namespace WhatIs1CFramework.Pages.Articles
             return Page();
         }
 
-        //public ActionResult GetImage(int id)
-        //{
-        //    //byte[] image = _context
-        //    //return File(image, "image/jpg");
-        //}
+    
     }
 }
