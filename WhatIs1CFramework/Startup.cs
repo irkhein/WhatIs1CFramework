@@ -37,7 +37,7 @@ namespace WhatIs1CFramework
             {
                 services.AddDbContext<WhatIs1CFrameworkContext>(options =>
                 options.UseMySQL(
-                    Configuration.GetConnectionString("WhatIs1CFrameworkContextProduction")));
+                    Configuration.GetConnectionString("WhatIs1CFrameworkContext")));
             }
 
             services.AddRazorPages();
