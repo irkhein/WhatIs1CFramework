@@ -36,8 +36,8 @@ namespace WhatIs1CFramework
             else
             {
                 services.AddDbContext<WhatIs1CFrameworkContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("WhatIs1CFrameworkContext")));
+                options.UseMySQL(
+                    Configuration.GetConnectionString("WhatIs1CFrameworkContextProduction")));
             }
 
             services.AddRazorPages();
@@ -49,6 +49,7 @@ namespace WhatIs1CFramework
             {
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
+                app.UseStaticFiles();
             }
             else
             {

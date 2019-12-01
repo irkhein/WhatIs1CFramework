@@ -20,5 +20,17 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.0-preview1.19506.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.0.0" />
+    <PackageReference Include="MySql.Data.EntityFrameworkCore.Design" Version="8.0.18" />
+    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.18" />
+    <PackageReference Include="MySql.Data.EntityFramework" Version="8.0.18" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="scenario_of_usage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\д1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\д1.jpeg" />
   </ItemGroup>
 </Project>

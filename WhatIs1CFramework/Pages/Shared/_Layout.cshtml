@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WhatIs1CFramework</title>
+    <title>@ViewData["Title"] - What Is 1C Framework</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -19,8 +19,14 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <!--manually added-->
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="Articles/Index">Articles</a>
+                        <li>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Articles/Details" asp-route-id=6>Introduction to 1C</a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Articles/Details" asp-route-id=1>1C application architecture</a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Articles/Details" asp-route-id=5>More about development</a>
                         </li>
                         <!-- manually added-->
                         <li class="nav-item">
@@ -35,9 +41,11 @@
         </nav>
     </header>
     <div class="container">
+        
         <main role="main" class="pb-3">
-            @RenderBody()
+              @RenderBody()                
         </main>
+        
     </div>
 
     <footer class="border-top footer text-muted">
