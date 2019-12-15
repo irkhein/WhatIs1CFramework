@@ -12,6 +12,8 @@
     <Folder Include="wwwroot\img\" />
     <Folder Include="wwwroot\img\1\" />
     <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\img\3\" />
+    <Folder Include="wwwroot\img\4\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.0-preview1-19509-03" />
