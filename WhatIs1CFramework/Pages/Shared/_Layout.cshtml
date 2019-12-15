@@ -1,15 +1,21 @@
-﻿<!DOCTYPE html>
+﻿@inject WhatIs1CFramework.Data.WhatIs1CFrameworkContext _context
+@{
+//    var TheContext = ViewData["Context"];
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - What Is 1C Framework</title>
+    <link href="~/w.ico" rel="icon" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/site.css" type="text/css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <!--<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">-->
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3 fixed-top">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">WhatIs1CFramework</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -18,22 +24,8 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
-                        <!--manually added-->
-                        <li>
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Articles/Details" asp-route-id=6>Introduction to 1C</a>
-                        </li>
-                        <li>
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Articles/Details" asp-route-id=1>1C application architecture</a>
-                        </li>
-                        <li>
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Articles/Details" asp-route-id=5>More about development</a>
-                        </li>
-                        <!-- manually added-->
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
                     </ul>
                 </div>
@@ -41,11 +33,18 @@
         </nav>
     </header>
     <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+                <partial name="_NavigationBar" model="@new _NavigationBarModel(_context)" />
+            </div>
         
-        <main role="main" class="pb-3">
-              @RenderBody()                
-        </main>
-        
+            <div class="col-sm-10">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+
+        </div>
     </div>
 
     <footer class="border-top footer text-muted">

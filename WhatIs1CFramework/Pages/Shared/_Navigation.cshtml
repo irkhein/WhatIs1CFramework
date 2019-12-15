@@ -1,0 +1,22 @@
+﻿<nav id="sidebar">
+
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-page="/Articles/Details" asp-route-id=6>Introduction to 1C</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-page="/Articles/Details" asp-route-id=1>1C application architecture</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-page="/Articles/Details" asp-route-id=5>More about development</a>
+        </li> 
+        @foreach (var item in (IEnumerable<WhatIs1CFramework.Models.Article>)ViewData["Article"])
+        {
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-page="/Articles/Details" asp-route-id="@item.ID">@item.Title </a>
+            </li>
+        }
+    </ul>
+
+</nav>

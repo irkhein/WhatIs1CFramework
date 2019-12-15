@@ -9,6 +9,9 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Pages\Articles\" />
+    <Folder Include="wwwroot\img\" />
+    <Folder Include="wwwroot\img\1\" />
+    <Folder Include="wwwroot\css\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.0-preview1-19509-03" />
@@ -26,11 +29,5 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="scenario_of_usage.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Remove="wwwroot\д1.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="wwwroot\д1.jpeg" />
   </ItemGroup>
 </Project>

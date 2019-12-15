@@ -13,5 +13,7 @@ namespace WhatIs1CFramework.Models
         [DataType(DataType.Html)]
         public string Text { get; set; }
         public virtual ICollection<Picture> Pictures { get; set; }
+        public bool Display { get; set; }
+        public int SortOrder { get; set; }
     }
 }

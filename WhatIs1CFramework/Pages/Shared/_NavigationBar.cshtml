@@ -1,0 +1,13 @@
+﻿@model _NavigationBarModel
+
+    
+<nav class="navbar bg-light" style="position:fixed;left: 0;height: 100%;" id="sidebar">
+    <ul class="navbar-nav" style="padding-top: 0;">
+        @foreach (var item in Model.Article)
+        {
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-page="/Articles/Details" asp-route-id="@item.ID">@item.Title </a>
+            </li>
+        }
+    </ul>
+</nav>

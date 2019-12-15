@@ -1,10 +1,6 @@
 @page
 @model WhatIs1CFramework.Pages.Articles.EditModel
 
-@{
-    Layout = null;
-}
-
 <!DOCTYPE html>
 
 <html>
@@ -17,7 +13,7 @@
 <h4>Article</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-12">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Article.ID" />
@@ -33,8 +29,19 @@
             </div>
             <div class="form-group">
                 <label asp-for="Article.Text" class="control-label"></label>
-                <input asp-for="Article.Text" class="form-control" />
+                <!--<iput asp-for="Article.Text" class="form-control" /> -->
+                <textarea class="form-control" asp-for="Article.Text" rows="100" cols="100"></textarea>
                 <span asp-validation-for="Article.Text" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Article.Display" class="control-label"></label>
+                <input asp-for="Article.Display" class="form-control" />
+                <span asp-validation-for="Article.Display" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Article.SortOrder" class="control-label"></label>
+                <input asp-for="Article.SortOrder" class="form-control" />
+                <span asp-validation-for="Article.SortOrder" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
