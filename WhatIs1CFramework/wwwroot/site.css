@@ -202,12 +202,23 @@ body {
     margin-bottom: 15px;
 }
 
-.carousel-inner {
+/*.carousel-inner {
     width: 100%;
     height: 400px !important;
-}
+}*/
 
 /*carousel-inner > .carousel-item active {
     margin: auto;
 }*/
 
+#sidebar {
+    min-height: 100vh;
+    position: fixed;
+}
+
+@media (max-width: 576px) {
+    #sidebar {
+        position: unset;
+        min-height: 0;
+    }
+}

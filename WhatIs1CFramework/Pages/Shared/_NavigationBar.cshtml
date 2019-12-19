@@ -1,13 +1,22 @@
 ﻿@model _NavigationBarModel
 
     
-<nav class="navbar bg-light" style="position:fixed;left: 0;height: 100%;" id="sidebar">
-    <ul class="navbar-nav" style="padding-top: 0;">
-        @foreach (var item in Model.Article)
-        {
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-page="/Articles/Details" asp-route-id="@item.ID">@item.Title </a>
-            </li>
-        }
-    </ul>
-</nav>
+    <nav class="navbar navbar-toggleable-sm navbar-light bg-light fixed-left" id="sidebar">
+        <!--style="position:fixed;left: 0;height: 100%;"--> <!--navbar-toggleable-sm-->
+        <!--<div class="container">-->
+        <button class="navbar-toggler d-block d-sm-none" type="button" data-toggle="collapse" data-target="#MySideBarList" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-sm-inline-flex flex-sm-row-reverse" id="MySideBarList">
+            <ul class="navbar-nav flex-grow-1">
+                @foreach (var item in Model.Article)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-page="/Articles/Details" asp-route-id="@item.ID">@item.Title </a>
+                    </li>
+                }
+            </ul>
+        </div>
+        <!--</div>-->
+    </nav>
